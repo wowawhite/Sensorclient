@@ -33,7 +33,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "stm32746g_discovery_sdram.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -65,7 +65,7 @@ void PeriphCommonClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+BSP_SDRAM_Init();  // TODO: chekc if this happens in fmc.c for SDRAM init, not only fmc
 /* USER CODE END 0 */
 
 /**

@@ -35,11 +35,7 @@ extern "C" {
 #include "stm32746g_discovery_ts.h"
 #include "stm32746g_discovery_lcd.h"
 #include "stm32746g_discovery_sdram.h"
-#include "stm32746g_discovery_sd.h"
-#include "stm32746g_discovery_eeprom.h"
-#include "stm32746g_discovery_camera.h"
 #include "stm32746g_discovery_audio.h"
-#include "stm32746g_discovery_qspi.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
