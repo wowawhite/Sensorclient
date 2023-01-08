@@ -1,0 +1,26 @@
+var group__STM32746G__DISCOVERY__CAMERA__Exported__Functions =
+[
+    [ "BSP_CAMERA_BlackWhiteConfig", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#gafcbe662eb3ddfd8d5af1659533d2d3d3", null ],
+    [ "BSP_CAMERA_ColorEffectConfig", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#ga8b06a57ac1cd16158d002079a32c3a00", null ],
+    [ "BSP_CAMERA_ContinuousStart", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#ga36d6a6248f9455ce31c54444477fab87", null ],
+    [ "BSP_CAMERA_ContrastBrightnessConfig", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#ga7b8c9bc42de5ad2d17aca55d23a3fbce", null ],
+    [ "BSP_CAMERA_DeInit", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#ga250e6fd73b9d754a19f20384c7a7bca0", null ],
+    [ "BSP_CAMERA_ErrorCallback", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#gac974dc9d18ad37d3e504549d08f84825", null ],
+    [ "BSP_CAMERA_FrameEventCallback", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#ga01d8c8f2575f72cb3f68277c44ed1128", null ],
+    [ "BSP_CAMERA_Init", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#gaa79d47d638af9d2cb8e84298b41bfd79", null ],
+    [ "BSP_CAMERA_LineEventCallback", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#ga656cbf08e6497daeb2d340531e1ae834", null ],
+    [ "BSP_CAMERA_MspDeInit", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#gadc38f79a1770c4a60349a1c14cd796a1", null ],
+    [ "BSP_CAMERA_MspInit", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#gad9900415bb3048f3956e9352c50916f8", null ],
+    [ "BSP_CAMERA_PwrDown", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#gabff1b47537be273e0311c3e35a580b92", null ],
+    [ "BSP_CAMERA_PwrUp", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#ga7974dcb0277dedb4a17d2fbdce193f67", null ],
+    [ "BSP_CAMERA_Resume", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#gaccaf076abbfa26b7308d688e4eabe95b", null ],
+    [ "BSP_CAMERA_SnapshotStart", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#ga2d4d43db57926c9af4554091d42df6c1", null ],
+    [ "BSP_CAMERA_Stop", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#ga3ef9b04f4ed4fabf8e5b9427be9e757b", null ],
+    [ "BSP_CAMERA_Suspend", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#gaf89534b1c01ca08af67653c8b209a9c0", null ],
+    [ "BSP_CAMERA_VsyncEventCallback", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#gaed928284674a8b521369808f2bdf2dd6", null ],
+    [ "GetSize", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#gac57d9ee4ab843d54e80207c116d5f811", null ],
+    [ "HAL_DCMI_ErrorCallback", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#gacfc7017f6a67725968f2efa31f5633f0", null ],
+    [ "HAL_DCMI_FrameEventCallback", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#ga3ab7733cab4179da72f2babf5344b828", null ],
+    [ "HAL_DCMI_LineEventCallback", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#gaf3491aa5b82a4f5a8b2ab85fb717bb5d", null ],
+    [ "HAL_DCMI_VsyncEventCallback", "group__STM32746G__DISCOVERY__CAMERA__Exported__Functions.html#ga7175c4e8555aa828b9c92cb813c3416a", null ]
+];

@@ -1,0 +1,38 @@
+var ethernetif_8c =
+[
+    [ "RxBuff_t", "structRxBuff__t.html", "structRxBuff__t" ],
+    [ "ETH_DMA_TRANSMIT_TIMEOUT", "ethernetif_8c.html#ae7973dc1158b331675d5843ec700e3cc", null ],
+    [ "ETH_RX_BUFFER_CNT", "ethernetif_8c.html#ab661943899cf92b88a343c6d947689d2", null ],
+    [ "ETH_TX_BUFFER_MAX", "ethernetif_8c.html#a5bd7d685d6df7a520f6ee22cf3321d6f", null ],
+    [ "IFNAME0", "ethernetif_8c.html#acd9e3df20507d5f895e80477aef74555", null ],
+    [ "IFNAME1", "ethernetif_8c.html#a43b130296861cb255f1ad5b8c3787fd1", null ],
+    [ "RxAllocStatusTypeDef", "ethernetif_8c.html#ac83076749b61d50756e5d46e59a3941d", [
+      [ "RX_ALLOC_OK", "ethernetif_8c.html#ac83076749b61d50756e5d46e59a3941da4b45e5c808aedd5dccb790dd41783c57", null ],
+      [ "RX_ALLOC_ERROR", "ethernetif_8c.html#ac83076749b61d50756e5d46e59a3941dad80e0365a2b3481590ccb14aeec2fbc5", null ]
+    ] ],
+    [ "ETH_PHY_IO_DeInit", "ethernetif_8c.html#a53b4d1871ab4513ba005eaf88731e122", null ],
+    [ "ETH_PHY_IO_GetTick", "ethernetif_8c.html#a86c41b29cc73c1a48a60856eb07c6a7b", null ],
+    [ "ETH_PHY_IO_Init", "ethernetif_8c.html#adf9c6dbc164c4103a2295cd62e2660cc", null ],
+    [ "ETH_PHY_IO_ReadReg", "ethernetif_8c.html#abbe62c596bec1af05ef07d70715d84e5", null ],
+    [ "ETH_PHY_IO_WriteReg", "ethernetif_8c.html#a45f32cf35565d9c43797565dd41e8122", null ],
+    [ "ethernet_link_check_state", "ethernetif_8c.html#a4532835afc5bb2398f148560fd57f46b", null ],
+    [ "ethernetif_init", "ethernetif_8c.html#a7ce979d0ec31575ecf17998b7bd9abb2", null ],
+    [ "ethernetif_input", "ethernetif_8c.html#a6b594ba7163978faa6f67288054079ac", null ],
+    [ "HAL_ETH_MspDeInit", "ethernetif_8c.html#a5f7bf49bc28d6fcfd3929564f97a4764", null ],
+    [ "HAL_ETH_MspInit", "ethernetif_8c.html#a195c83d62f07607560fb639248b7235b", null ],
+    [ "HAL_ETH_RxAllocateCallback", "ethernetif_8c.html#a0a9bcb253e401cb16b6dcd272fe6bd67", null ],
+    [ "HAL_ETH_RxLinkCallback", "ethernetif_8c.html#ab63a51463465c8f0808e298be3891e92", null ],
+    [ "HAL_ETH_TxFreeCallback", "ethernetif_8c.html#a565beeeec3f98e0e7ab64afc5ddaf7a2", null ],
+    [ "low_level_init", "ethernetif_8c.html#a15915c49a70d85ff1c6af793cda34419", null ],
+    [ "low_level_input", "ethernetif_8c.html#a4160fbbf4831a305c3cef59f1b9ca461", null ],
+    [ "low_level_output", "ethernetif_8c.html#a00014ad0e69ae7ed01a084faa571ed34", null ],
+    [ "low_level_output_arp_off", "ethernetif_8c.html#a7ddc6d49154c32456a2234c8445a1bae", null ],
+    [ "LWIP_MEMPOOL_DECLARE", "ethernetif_8c.html#aa53c773d3c41a662392a50d176be56b8", null ],
+    [ "pbuf_free_custom", "ethernetif_8c.html#af55256aecf8a18048e439dceffff174f", null ],
+    [ "sys_now", "group__sys__time.html#ga11316ac1e77418c6fa4ab8869e3fa199", null ],
+    [ "heth", "ethernetif_8c.html#a3605d86556d96074ff098be46eca2837", null ],
+    [ "LAN8742", "ethernetif_8c.html#ac5c8eb5ee2750c5800566f9a25b19d52", null ],
+    [ "LAN8742_IOCtx", "ethernetif_8c.html#a6c47c657e268b7e41d43695e5d1bab8f", null ],
+    [ "RxAllocStatus", "ethernetif_8c.html#a7196e8b87508efd244c55ff09da04468", null ],
+    [ "TxConfig", "ethernetif_8c.html#a9ed19a93e08023302057789fb61f1ddd", null ]
+];

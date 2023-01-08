@@ -1,0 +1,26 @@
+var group__RCCEx__Exported__Constants =
+[
+    [ "RCC Periph Clock Selection", "group__RCCEx__Periph__Clock__Selection.html", "group__RCCEx__Periph__Clock__Selection" ],
+    [ "RCCEx PLLSAIP Clock Divider", "group__RCCEx__PLLSAIP__Clock__Divider.html", "group__RCCEx__PLLSAIP__Clock__Divider" ],
+    [ "RCCEx PLLSAI DIVR", "group__RCCEx__PLLSAI__DIVR.html", "group__RCCEx__PLLSAI__DIVR" ],
+    [ "RCCEx I2S Clock Source", "group__RCCEx__I2S__Clock__Source.html", "group__RCCEx__I2S__Clock__Source" ],
+    [ "RCCEx SAI1 Clock Source", "group__RCCEx__SAI1__Clock__Source.html", "group__RCCEx__SAI1__Clock__Source" ],
+    [ "RCCEx SAI2 Clock Source", "group__RCCEx__SAI2__Clock__Source.html", "group__RCCEx__SAI2__Clock__Source" ],
+    [ "RCCEx CEC Clock Source", "group__RCCEx__CEC__Clock__Source.html", "group__RCCEx__CEC__Clock__Source" ],
+    [ "RCCEx USART1 Clock Source", "group__RCCEx__USART1__Clock__Source.html", "group__RCCEx__USART1__Clock__Source" ],
+    [ "RCCEx USART2 Clock Source", "group__RCCEx__USART2__Clock__Source.html", "group__RCCEx__USART2__Clock__Source" ],
+    [ "RCCEx USART3 Clock Source", "group__RCCEx__USART3__Clock__Source.html", "group__RCCEx__USART3__Clock__Source" ],
+    [ "RCCEx UART4 Clock Source", "group__RCCEx__UART4__Clock__Source.html", "group__RCCEx__UART4__Clock__Source" ],
+    [ "RCCEx UART5 Clock Source", "group__RCCEx__UART5__Clock__Source.html", "group__RCCEx__UART5__Clock__Source" ],
+    [ "RCCEx USART6 Clock Source", "group__RCCEx__USART6__Clock__Source.html", "group__RCCEx__USART6__Clock__Source" ],
+    [ "RCCEx UART7 Clock Source", "group__RCCEx__UART7__Clock__Source.html", "group__RCCEx__UART7__Clock__Source" ],
+    [ "RCCEx UART8 Clock Source", "group__RCCEx__UART8__Clock__Source.html", "group__RCCEx__UART8__Clock__Source" ],
+    [ "RCCEx I2C1 Clock Source", "group__RCCEx__I2C1__Clock__Source.html", "group__RCCEx__I2C1__Clock__Source" ],
+    [ "RCCEx I2C2 Clock Source", "group__RCCEx__I2C2__Clock__Source.html", "group__RCCEx__I2C2__Clock__Source" ],
+    [ "RCCEx I2C3 Clock Source", "group__RCCEx__I2C3__Clock__Source.html", "group__RCCEx__I2C3__Clock__Source" ],
+    [ "RCCEx I2C4 Clock Source", "group__RCCEx__I2C4__Clock__Source.html", "group__RCCEx__I2C4__Clock__Source" ],
+    [ "RCCEx LPTIM1 Clock Source", "group__RCCEx__LPTIM1__Clock__Source.html", "group__RCCEx__LPTIM1__Clock__Source" ],
+    [ "RCCEx CLK48 Clock Source", "group__RCCEx__CLK48__Clock__Source.html", "group__RCCEx__CLK48__Clock__Source" ],
+    [ "RCCEx TIM Prescaler Selection", "group__RCCEx__TIM__Prescaler__Selection.html", "group__RCCEx__TIM__Prescaler__Selection" ],
+    [ "RCCEx SDMMC1 Clock Source", "group__RCCEx__SDMMC1__Clock__Source.html", "group__RCCEx__SDMMC1__Clock__Source" ]
+];

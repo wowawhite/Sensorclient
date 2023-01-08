@@ -21,9 +21,9 @@
 #include "crc.h"
 #include "lwip.h"
 #include "pdm2pcm.h"
-#include "quadspi.h"
 #include "rng.h"
 #include "rtc.h"
+#include "sai.h"
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
@@ -56,6 +56,7 @@
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+void PeriphCommonClock_Config(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -93,6 +94,9 @@ int main(void)
   /* Configure the system clock */
   SystemClock_Config();
 
+/* Configure the peripherals common clocks */
+  PeriphCommonClock_Config();
+
   /* USER CODE BEGIN SysInit */
 
   /* USER CODE END SysInit */
@@ -101,13 +105,13 @@ int main(void)
   MX_GPIO_Init();
   MX_CRC_Init();
   MX_FMC_Init();
-  MX_QUADSPI_Init();
   MX_RTC_Init();
   MX_TIM1_Init();
   MX_USART1_UART_Init();
   MX_RNG_Init();
   MX_LWIP_Init();
   MX_PDM2PCM_Init();
+  MX_SAI1_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -125,44 +129,6 @@ int main(void)
 
 
     /* USER CODE END WHILE */
-	  /*
-	   *
-			// io foos
-			HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
-			HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-			HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
-			HAL_StatusTypeDef HAL_UART_Receive_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
-			HAL_StatusTypeDef HAL_UART_Transmit_DMA(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
-			HAL_StatusTypeDef HAL_UART_Receive_DMA(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
-			HAL_StatusTypeDef HAL_UART_DMAPause(UART_HandleTypeDef *huart);
-			HAL_StatusTypeDef HAL_UART_DMAResume(UART_HandleTypeDef *huart);
-			HAL_StatusTypeDef HAL_UART_DMAStop(UART_HandleTypeDef *huart);
-			// Transfer Abort functions
-			HAL_StatusTypeDef HAL_UART_Abort(UART_HandleTypeDef *huart);
-			HAL_StatusTypeDef HAL_UART_AbortTransmit(UART_HandleTypeDef *huart);
-			HAL_StatusTypeDef HAL_UART_AbortReceive(UART_HandleTypeDef *huart);
-			HAL_StatusTypeDef HAL_UART_Abort_IT(UART_HandleTypeDef *huart);
-			HAL_StatusTypeDef HAL_UART_AbortTransmit_IT(UART_HandleTypeDef *huart);
-			HAL_StatusTypeDef HAL_UART_AbortReceive_IT(UART_HandleTypeDef *huart);
-
-			void HAL_UART_IRQHandler(UART_HandleTypeDef *huart);
-			void HAL_UART_TxHalfCpltCallback(UART_HandleTypeDef *huart);
-			void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart);
-			void HAL_UART_RxHalfCpltCallback(UART_HandleTypeDef *huart);
-			void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart);
-			void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart);
-			void HAL_UART_AbortCpltCallback(UART_HandleTypeDef *huart);
-			void HAL_UART_AbortTransmitCpltCallback(UART_HandleTypeDef *huart);
-			void HAL_UART_AbortReceiveCpltCallback(UART_HandleTypeDef *huart);
-
-			void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size);
-	   */
-
-
-
-
-
-
 
     /* USER CODE BEGIN 3 */
   }
@@ -221,6 +187,31 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_6) != HAL_OK)
+  {
+    Error_Handler();
+  }
+}
+
+/**
+  * @brief Peripherals Common Clock Configuration
+  * @retval None
+  */
+void PeriphCommonClock_Config(void)
+{
+  RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
+
+  /** Initializes the peripherals clock
+  */
+  PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_SAI1|RCC_PERIPHCLK_CLK48;
+  PeriphClkInitStruct.PLLSAI.PLLSAIN = 384;
+  PeriphClkInitStruct.PLLSAI.PLLSAIR = 5;
+  PeriphClkInitStruct.PLLSAI.PLLSAIQ = 2;
+  PeriphClkInitStruct.PLLSAI.PLLSAIP = RCC_PLLSAIP_DIV8;
+  PeriphClkInitStruct.PLLSAIDivQ = 1;
+  PeriphClkInitStruct.PLLSAIDivR = RCC_PLLSAIDIVR_8;
+  PeriphClkInitStruct.Sai1ClockSelection = RCC_SAI1CLKSOURCE_PLLSAI;
+  PeriphClkInitStruct.Clk48ClockSelection = RCC_CLK48SOURCE_PLLSAIP;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
   {
     Error_Handler();
   }

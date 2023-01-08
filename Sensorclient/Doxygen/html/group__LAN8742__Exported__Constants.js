@@ -1,0 +1,25 @@
+var group__LAN8742__Exported__Constants =
+[
+    [ "LAN8742 Registers Mapping", "group__LAN8742__Registers__Mapping.html", "group__LAN8742__Registers__Mapping" ],
+    [ "LAN8742 BCR Bit Definition", "group__LAN8742__BCR__Bit__Definition.html", "group__LAN8742__BCR__Bit__Definition" ],
+    [ "LAN8742 BSR Bit Definition", "group__LAN8742__BSR__Bit__Definition.html", "group__LAN8742__BSR__Bit__Definition" ],
+    [ "LAN8742 PHYI1R Bit Definition", "group__LAN8742__PHYI1R__Bit__Definition.html", "group__LAN8742__PHYI1R__Bit__Definition" ],
+    [ "LAN8742 PHYI2R Bit Definition", "group__LAN8742__PHYI2R__Bit__Definition.html", "group__LAN8742__PHYI2R__Bit__Definition" ],
+    [ "LAN8742 ANAR Bit Definition", "group__LAN8742__ANAR__Bit__Definition.html", "group__LAN8742__ANAR__Bit__Definition" ],
+    [ "LAN8742 ANLPAR Bit Definition", "group__LAN8742__ANLPAR__Bit__Definition.html", "group__LAN8742__ANLPAR__Bit__Definition" ],
+    [ "LAN8742 ANER Bit Definition", "group__LAN8742__ANER__Bit__Definition.html", "group__LAN8742__ANER__Bit__Definition" ],
+    [ "LAN8742 ANNPTR Bit Definition", "group__LAN8742__ANNPTR__Bit__Definition.html", "group__LAN8742__ANNPTR__Bit__Definition" ],
+    [ "LAN8742 ANNPRR Bit Definition", "group__LAN8742__ANNPRR__Bit__Definition.html", "group__LAN8742__ANNPRR__Bit__Definition" ],
+    [ "LAN8742 MMDACR Bit Definition", "group__LAN8742__MMDACR__Bit__Definition.html", "group__LAN8742__MMDACR__Bit__Definition" ],
+    [ "LAN8742 ENCTR Bit Definition", "group__LAN8742__ENCTR__Bit__Definition.html", "group__LAN8742__ENCTR__Bit__Definition" ],
+    [ "LAN8742 MCSR Bit Definition", "group__LAN8742__MCSR__Bit__Definition.html", "group__LAN8742__MCSR__Bit__Definition" ],
+    [ "LAN8742 SMR Bit Definition", "group__LAN8742__SMR__Bit__Definition.html", "group__LAN8742__SMR__Bit__Definition" ],
+    [ "LAN8742 TPDCR Bit Definition", "group__LAN8742__TPDCR__Bit__Definition.html", "group__LAN8742__TPDCR__Bit__Definition" ],
+    [ "LAN8742 TCSR Bit Definition", "group__LAN8742__TCSR__Bit__Definition.html", "group__LAN8742__TCSR__Bit__Definition" ],
+    [ "LAN8742 SCSIR Bit Definition", "group__LAN8742__SCSIR__Bit__Definition.html", "group__LAN8742__SCSIR__Bit__Definition" ],
+    [ "LAN8742 CLR Bit Definition", "group__LAN8742__CLR__Bit__Definition.html", "group__LAN8742__CLR__Bit__Definition" ],
+    [ "LAN8742 IMR ISFR Bit Definition", "group__LAN8742__IMR__ISFR__Bit__Definition.html", "group__LAN8742__IMR__ISFR__Bit__Definition" ],
+    [ "LAN8742 PHYSCSR Bit Definition", "group__LAN8742__PHYSCSR__Bit__Definition.html", "group__LAN8742__PHYSCSR__Bit__Definition" ],
+    [ "LAN8742 Status", "group__LAN8742__Status.html", "group__LAN8742__Status" ],
+    [ "LAN8742 IT Flags", "group__LAN8742__IT__Flags.html", "group__LAN8742__IT__Flags" ]
+];

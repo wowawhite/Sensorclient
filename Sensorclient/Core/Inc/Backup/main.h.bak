@@ -31,7 +31,15 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "stm32746g_discovery.h"
+#include "stm32746g_discovery_ts.h"
+#include "stm32746g_discovery_lcd.h"
+#include "stm32746g_discovery_sdram.h"
+#include "stm32746g_discovery_sd.h"
+#include "stm32746g_discovery_eeprom.h"
+#include "stm32746g_discovery_camera.h"
+#include "stm32746g_discovery_audio.h"
+#include "stm32746g_discovery_qspi.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -207,7 +215,7 @@ void Error_Handler(void);
 #define ULPI_D4_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
-
+#define LWIP_DHCP
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

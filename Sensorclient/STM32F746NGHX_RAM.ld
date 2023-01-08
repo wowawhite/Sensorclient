@@ -174,7 +174,7 @@ SECTIONS
     . = ALIGN(8);
   } >RAM
   /* Custom external SDRAM  */
-      .sdram_data (NOLOAD) :
+    .sdram_data (NOLOAD) :
     {
     . = ALIGN(4);
     _sdram_data_begin = .;
