@@ -88,7 +88,14 @@ void NMI_Handler(void)
 void HardFault_Handler(void)
 {
   /* USER CODE BEGIN HardFault_IRQn 0 */
-
+	#ifdef DEBUG
+	  asm("BKPT #0");
+	#else
+	  while(1) {
+		HAL_Delay(250);
+		HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+	  }
+	#endif
   /* USER CODE END HardFault_IRQn 0 */
   while (1)
   {

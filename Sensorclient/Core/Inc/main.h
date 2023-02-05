@@ -143,7 +143,12 @@ void Error_Handler(void);
 #define ULPI_D4_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
-#define LWIP_DHCP
+//#define LWIP_DHCP
+#define TRUE 1
+#define FALSE 0
+#define ARRAY_LENGTH(array) ( sizeof(array) / sizeof((array)[0]) )  // only for arrays
+#define EVER ;;
+
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
