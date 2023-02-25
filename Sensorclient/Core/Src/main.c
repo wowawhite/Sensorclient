@@ -45,6 +45,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define SDRAM __attribute__((section(".SDRAM_EX")))
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -55,7 +56,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+  uint32_t SDRAM extern_array[0x800000/4];   // range[0 - 2097151]
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -132,14 +133,21 @@ int main(void)
    *
    */
 
+
+	volatile uint32_t SDRAM_datapointer = 0;
+	volatile uint32_t SDRAM_dummydata = 0;
+	volatile uint32_t targetarray = 0;
 	//linker script definition
 	//https://stackoverflow.com/questions/48561217/how-to-get-value-of-variable-defined-in-ld-linker-script-from-c/54728097#54728097
-/*	extern uint8_t _sdram_data_begin[];
+	//https://www.mikrocontroller.net/topic/364403
+	//https://github.com/MaJerle/stm32f429/blob/main/14-STM32F429_SDRAM_VARIABLES/User/main.c
+
+	/*	extern uint8_t _sdram_data_begin[];
 	extern uint8_t _sdram_data_end[];
 	uint32_t start_of_sdram = (uint32_t)_sdram_data_begin;
 	uint32_t end_of_sdram = (uint32_t)_sdram_data_end;
 	char sdram_buffer[SDRAM_BUFFER_SIZE] __attribute__((section (".sdram_data")));
-	*/
+
 
 // SDRAM manual test
 	const uint32_t testdatasize = 10;
@@ -162,7 +170,7 @@ int main(void)
 //		}
 
 	}
-
+	*/
   /* startadress from driver .h file
    * SDRAM_DEVICE_ADDR  ((uint32_t)0xC0000000)
    * #define SDRAM_DEVICE_SIZE  ((uint32_t)0x800000)  // SDRAM device size in MBytes
@@ -172,22 +180,26 @@ int main(void)
 /*
   if( BSP_SDRAM_WriteData(RAM_relative_addr, sourcearray, testdatasize ) != SDRAM_OK ){
 	  Error_Handler();
-  }*/
+
 
   if(BSP_SDRAM_ReadData(SDRAM_absolute_start-testdatasize, targetarray, testdatasize ) != SDRAM_OK ){
 	  Error_Handler();
   }
+   }*/
 /*  for(int i=0; i<testdatasize; i++){
 	  targetarray[i] = sourcearray[i];
 
   }*/
 
   //uint32_t newline[5] = {0x41,0x2d,0x42, 0x0d, 0x0a};  // W-G CR LF
-  uint8_t printline[6] = {0xAF,0x00,0x00,0xFE,0x0d,0x0a};
+//  uint8_t printline[6] = {0xAF,0x00,0x00,0xFE,0x0d,0x0a};
 
-  size_t printline_size = ARRAY_LENGTH(printline);
+  //size_t printline_size = ARRAY_LENGTH(printline);
+
+
   size_t sendonce = 0;
-
+  uint32_t iterator = 0;
+  uint8_t printme[4];
 /*
   if (HAL_UART_Transmit(&huart1, start_of_sdram, 4, 1000) != HAL_OK)  // sending to Linux /dev/ttyACM0, can only transmit 16 bis max
   {
@@ -215,25 +227,39 @@ int main(void)
 
 */
 
-	if(sendonce == 0)
-	{
-		if(HAL_GPIO_ReadPin(USERBUTTON_GPIO_Port, USERBUTTON_Pin))
-		{
-			for(int i=0; i<testdatasize; i++)
-			{
-				printline[0] = (uint8_t)targetarray[i]>>4;
-				printline[1] = (uint8_t)targetarray[i]>>8;
-				printline[2] = (uint8_t)targetarray[i]>>12;
-				printline[3] = (uint8_t)targetarray[i]>>16;
 
-				if (HAL_UART_Transmit(&huart1, printline, printline_size, 1000) != HAL_OK)  // sending to Linux /dev/ttyACM0
+	if(HAL_GPIO_ReadPin(USERBUTTON_GPIO_Port, USERBUTTON_Pin))
+	{
+		for(uint32_t i=0; i< 50; i++)
+		{
+
+			SDRAM_datapointer = SDRAM_datapointer + iterator*4;  // TODO: bug with SDRAM_datapointer
+			SDRAM_dummydata = iterator+20 ;  // modulo for max uint32_t   % 0xFFFFFFF
+			iterator++;
+
+			if( BSP_SDRAM_WriteData(SDRAM_datapointer, &SDRAM_dummydata, 4 ) != SDRAM_OK ){  Error_Handler(); }
+
+			if(BSP_SDRAM_ReadData(SDRAM_datapointer, &targetarray, 4  ) != SDRAM_OK ){  Error_Handler();  }
+
+			printme[0] = (uint8_t)targetarray;
+			printme[1] = (uint8_t)targetarray>>8;
+			printme[2] = (uint8_t)targetarray>>16;
+			printme[3] = (uint8_t)targetarray>>24;
+
+			for(int j=0; j<4; j++)
+			{
+
+				if (HAL_UART_Transmit(&huart1, printme[j], 1, 1000) != HAL_OK)  // sending to Linux /dev/ttyACM0
 				{
-				  Error_Handler();
+				  Error_Handler();  //TODO error exit here on button press on first try
 				}
 			}
-			sendonce = 1;
+			HAL_Delay(1000);
 		}
+
+
 	}
+
 
     /* USER CODE END WHILE */
 
